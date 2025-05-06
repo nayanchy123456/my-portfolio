@@ -1,0 +1,18 @@
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .social-links a {
+    color: #ffffff;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #00bcd4;
+    transform: scale(1.2);
+  }
+  

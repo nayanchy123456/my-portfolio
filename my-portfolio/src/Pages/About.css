@@ -1,0 +1,78 @@
+.about {
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #1f1c2c, #928dab); /* deep violet gradient */
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 900px;
+  background: #1e1e2f;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #fff;
+}
+
+.about-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #ff4081; /* vibrant pink */
+  border-bottom: 3px solid #ff4081;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-content h3 {
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.about-content ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.about-content li {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+/* Richer, darker backgrounds */
+.about-content li:nth-child(1) {
+  background: #d84315; /* Java, Spring Boot */
+}
+.about-content li:nth-child(2) {
+  background: #0277bd; /* HTML, CSS, JS */
+}
+.about-content li:nth-child(3) {
+  background: #00838f; /* React */
+}
+.about-content li:nth-child(4) {
+  background: #2e7d32; /* MySQL */
+}
+.about-content li:nth-child(5) {
+  background: #6a1b9a; /* DSA */
+}
+
+.about-content li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
