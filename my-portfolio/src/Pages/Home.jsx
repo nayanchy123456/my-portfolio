@@ -1,20 +1,49 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import SocialLinks from "../Components/SocialLinks";
+import profilePic from "../assets/nayan.jpg";
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 function Home() {
   return (
     <section className="home">
-      <div className="home-content">
-        <h1>Hi, I'm Nayan Chaudhary</h1>
+      <motion.div 
+        className="left-section"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <img src={profilePic} alt="Nayan Chaudhary" className="profile-pic" />
+      </motion.div>
+
+      <motion.div 
+        className="right-section"
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>
+          Hi, I'm{" "}
+          <span className="highlight">
+            <Typewriter
+              words={["Nayan Chaudhary"]}
+              loop={false}
+              cursor
+              cursorStyle="|"
+              typeSpeed={100}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+          </span>
+        </h1>
         <h2>Java | Spring Boot | React Developer</h2>
         <p>
-          I build responsive web apps using modern technologies. Welcome to my portfolio!
+          Passionate about building full-stack web apps that are fast, responsive, and user-friendly.
         </p>
-        <Link to="/projects" className="btn">View Projects</Link>
-        <SocialLinks/>
-      </div>
+        <Link to="/projects" className="btn">🚀 View Projects</Link>
+        <SocialLinks />
+      </motion.div>
     </section>
   );
 }

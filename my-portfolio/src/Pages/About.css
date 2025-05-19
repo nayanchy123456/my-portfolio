@@ -76,3 +76,80 @@
   transform: translateY(-6px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
 }
+
+.about-content ul {
+  padding-left: 1.5rem;
+  margin-top: 10px;
+}
+
+.about-content li {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+
+
+.tech-icon {
+  font-size: 2.5rem;
+  color: #00ffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Tech stack container with subtle glowing border */
+.tech-stack-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid #00ffff; /* You can remove this line if you want no border at all */
+  border-radius: 12px;
+  /* Remove glowing box-shadow */
+  /* box-shadow: 0 0 25px rgba(0, 255, 255, 0.4); */
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+
+/* Each tech card with background, padding, and glow on hover */
+.tech-card {
+  background: #0f2027;  /* dark blue/teal shade */
+  border-radius: 15px;
+  padding: 25px 30px;
+  width: 130px;
+  height: 130px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #00ffff;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.tech-card:hover {
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Icon inside tech card */
+.tech-icon {
+  font-size: 3rem;
+  color: #00ffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Label under each icon */
+.tech-card span {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00ffff;
+  user-select: none;
+}
+
