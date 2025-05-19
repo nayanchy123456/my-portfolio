@@ -1,24 +1,27 @@
 .about {
   padding: 4rem 1rem;
-  background: linear-gradient(to right, #1f1c2c, #928dab); /* deep violet gradient */
+  background: linear-gradient(to right, #1f1c2c, #928dab);
   display: flex;
   justify-content: center;
 }
 
 .about-content {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1000px;
   background: #1e1e2f;
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   text-align: center;
   color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .about-content h1 {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
-  color: #ff4081; /* vibrant pink */
+  color: #ff4081;
   border-bottom: 3px solid #ff4081;
   display: inline-block;
   padding-bottom: 0.5rem;
@@ -38,97 +41,38 @@
   margin-bottom: 1rem;
 }
 
-.about-content ul {
-  list-style-type: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-}
-
-.about-content li {
-  padding: 0.8rem 1rem;
-  border-radius: 12px;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  color: #fff;
-}
-
-/* Richer, darker backgrounds */
-.about-content li:nth-child(1) {
-  background: #d84315; /* Java, Spring Boot */
-}
-.about-content li:nth-child(2) {
-  background: #0277bd; /* HTML, CSS, JS */
-}
-.about-content li:nth-child(3) {
-  background: #00838f; /* React */
-}
-.about-content li:nth-child(4) {
-  background: #2e7d32; /* MySQL */
-}
-.about-content li:nth-child(5) {
-  background: #6a1b9a; /* DSA */
-}
-
-.about-content li:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
-}
-
-.about-content ul {
-  padding-left: 1.5rem;
-  margin-top: 10px;
-}
-
-.about-content li {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-
-
-
-.tech-icon {
-  font-size: 2.5rem;
-  color: #00ffff;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Tech stack container with subtle glowing border */
+/* Tech Stack Grid Fix */
 .tech-stack-box {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
   margin-top: 20px;
-  border: 2px solid #00ffff; /* You can remove this line if you want no border at all */
+  border: 2px solid #00ffff;
   border-radius: 12px;
-  /* Remove glowing box-shadow */
-  /* box-shadow: 0 0 25px rgba(0, 255, 255, 0.4); */
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4px);
-  transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
-
-/* Each tech card with background, padding, and glow on hover */
+/* Tech Card */
 .tech-card {
-  background: #0f2027;  /* dark blue/teal shade */
+  background: #0f2027;
   border-radius: 15px;
-  padding: 25px 30px;
-  width: 130px;
-  height: 130px;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  padding: 20px;
+  width: 110px;
+  height: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #00ffff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  transition: all 0.3s ease;
   cursor: pointer;
   user-select: none;
-  transition: box-shadow 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
 }
 
 .tech-card:hover {
@@ -137,19 +81,62 @@
   transform: scale(1.1);
 }
 
-/* Icon inside tech card */
 .tech-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #00ffff;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Label under each icon */
 .tech-card span {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 1rem;
   font-weight: 600;
   color: #00ffff;
-  user-select: none;
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 2rem;
+  }
+
+  .tech-card {
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+  }
+
+  .tech-icon {
+    font-size: 2rem;
+  }
+
+  .tech-card span {
+    font-size: 0.85rem;
+  }
+
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tech-icon {
+    font-size: 1.8rem;
+  }
+
+  .tech-card span {
+    font-size: 0.75rem;
+  }
+
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+}

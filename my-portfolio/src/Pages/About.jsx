@@ -57,8 +57,8 @@ function About() {
           {[
             { icon: <FaJava />, label: "Java" },
             { icon: <SiSpringboot />, label: "Spring Boot" },
-            { icon: <FaHtml5 />, label: "HTML5" },
-            { icon: <FaCss3Alt />, label: "CSS3" },
+            { icon: <FaHtml5 />, label: "HTML" },
+            { icon: <FaCss3Alt />, label: "CSS" },
             { icon: <FaJs />, label: "JavaScript" },
             { icon: <FaReact />, label: "React JS" },
             { icon: <FaDatabase />, label: "MySQL" },
